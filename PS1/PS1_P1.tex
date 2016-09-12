@@ -1,0 +1,37 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\setlength{\parindent}{1cm}
+\begin{document}
+
+\title{AY250\_F16 PS1}
+\author{David Khatami}
+\date{\today}
+\maketitle
+
+\section*{Problem 1}
+\begin{enumerate}
+\item[(a)] Suppose we consider the two draws sequentially. The prior likelihood for the yellow M\&M coming from the 1996 bag vs. the 1994 bag is $P(1994)=P(1996)=0.5$. That is, before the draw, it is equally likely to come from either bag. The \textit{likelihood} of the yellow M\&M coming from the 1994 bag is simply the fractional percentage of yellow M\&M's in the bag, $P(Y|1994)=0.20$. Likewise, $P(Y|1996)=0.14$. For the green $M\&M$ we adopt identical priors (i.e. equal probability of coming from either bag), and here use the fractional percentage of green M\&M's, $P(G|1994)=0.10$ and $P(G|1996)=0.20$. Thus, the posterior probabilities are the prior times the likelihood, $P(1994|Y)=P(1994)P(Y|1994)=0.5\times0.2=0.01$ and $P(1996|Y)=P(1996)P(Y|1996)=0.5\times0.14=0.07$. For the green M\&M, $P(1994|G)=0.05$ and $P(1996|G)=0.1$.\par \indent
+	 Suppose we carry out the experiment and get a yellow $M\&M$ and a green $M\&M$. Since we draw one M\&M from each bag, we know that only \textit{one} can come from the 1994 bag, and the other \textit{must} come from the 1996 bag. The relative probability of the yellow M\&M coming from the 1994 bag rather than the 1996 bag is
+\begin{align}
+\frac{P(1994|Y,G)}{P(1996|Y,G)}&=\frac{P(1994|Y)P(1996|G)}{P(1996|Y)P(1994|G)}\\
+&=\frac{0.10\times0.10}{0.07\times0.05} \\
+&=2.86
+\end{align}
+or roughly three times more likely to have come from the 1994 bag.
+\item[(b)] The \textit{normalized} probability is simply the posterior divided by the evidence, where the evidence is given by
+\begin{align}
+P(Y,G)&=P(1994|Y,G)+P(1996|Y,G)\\
+&= 0.0135
+\end{align}
+Thus, the normalized probability is
+\begin{align}
+P(1994|Y,G)&=\frac{P(1994|Y)P(1996|G)}{P(Y,G)}\\
+&= \frac{0.10\times0.10}{0.0135}\\
+&= 0.74
+\end{align}
+or a 74\% chance.
+	 
+\end{enumerate}
+
+\end{document}
